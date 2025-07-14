@@ -1,4 +1,6 @@
 import tkinter as tk
+from UI.Paint_View import Open_Paints_View
+from UI.Schemes_View import Open_Schemes_View
 
 class MainWindow:        
     def __init__(self, master):
@@ -12,8 +14,8 @@ class MainWindow:
         # # Navbar
         btnWidth = 30
 
-        collectionBtn = tk.Button(master, text='Paint Collection', width=btnWidth)
-        schemesBtn = tk.Button(master, text='Paint Schemes', width=btnWidth)
+        collectionBtn = tk.Button(master, text='Paint Collection', width=btnWidth, command=Open_Paints_View)
+        schemesBtn = tk.Button(master, text='Paint Schemes', width=btnWidth, command=Open_Schemes_View)
 
         header.pack(pady=20)
         collectionBtn.pack()
