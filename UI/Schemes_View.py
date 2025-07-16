@@ -13,7 +13,7 @@ def Open_Schemes_View():
     r.config(menu=menu)
     fileMenu = tk.Menu(menu)
     menu.add_cascade(label='File', menu=fileMenu)
-    fileMenu.add_command(label="New Paint")
+    fileMenu.add_command(label="New Scheme")
     fileMenu.add_separator()
     fileMenu.add_command(label="Import...")
     fileMenu.add_command(label="Export")

@@ -5,7 +5,7 @@ from UI.Schemes_View import Open_Schemes_View
 class MainWindow:        
     def __init__(self, master):
         self.master = master
-        self.master.geometry ('1200x700')
+        self.master.geometry ('400x300')
         self.master.title ('Miniature Paint Catalog')
 
         # Header
