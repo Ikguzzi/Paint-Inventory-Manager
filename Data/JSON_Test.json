@@ -1,0 +1,84 @@
+{
+	"Paints": [
+		{
+			"id": 1,
+			"name": "Agrax Earthshade",
+			"brand": "Citadel",
+			"type": "Wash",
+			"value": "N/A",
+			"status": "Full"
+		},
+		{
+			"id": 2,
+			"name": "Macragge Blue",
+			"brand": "Citadel",
+			"type": "Base",
+			"value": "#1B3F8B",
+			"status": "Half-full"
+		},
+		{
+			"id": 3,
+			"name": "Bloody Red",
+			"brand": "Vallejo",
+			"type": "Game Color",
+			"value": "#A12228",
+			"status": "Full"
+		},
+		{
+			"id": 4,
+			"name": "Gunmetal",
+			"brand": "Army Painter",
+			"type": "Warpaint Metallic",
+			"value": "#8A8C8E",
+			"status": "Low"
+		},
+		{
+			"id": 5,
+			"name": "Menoth White Highlight",
+			"brand": "P3",
+			"type": "Base",
+			"value": "#E8E3D3",
+			"status": "Full"
+		},
+		{
+			"id": 6,
+			"name": "Wazdakka Red",
+			"brand": "Citadel",
+			"type": "Layer",
+			"value": "#7C2020",
+			"status": "Low"
+		},
+		{
+			"id": 7,
+			"name": "Sick Green",
+			"brand": "Vallejo",
+			"type": "Game Color",
+			"value": "#28A352",
+			"status": "Full"
+		},
+		{
+			"id": 8,
+			"name": "Tanned Flesh",
+			"brand": "Army Painter",
+			"type": "Warpaint",
+			"value": "#D39C74",
+			"status": "Half-full"
+		},
+		{
+			"id": 9,
+			"name": "Iron Warriors",
+			"brand": "Citadel",
+			"type": "Base",
+			"value": "#434343",
+			"status": "Empty"
+		},
+		{
+			"id": 10,
+			"name": "Cygnar Blue Highlight",
+			"brand": "P3",
+			"type": "Layer",
+			"value": "#90C3DC",
+			"status": "Full"
+		}
+	]
+}
