@@ -42,5 +42,23 @@ def Open_Paints_View():
         else:
             data = json.loads(data)
             for v in data["Paints"]:
-                name = Label(r, text=v["name"])
-                name.pack()
+                paint_frame = Frame(r, width=800)
+                paint_frame.pack(fill=X)
+
+                for i in range(4):
+                    paint_frame.columnconfigure(i, weight=1)
+
+                name = Label(paint_frame, text=v["name"], bg="lightblue").grid(
+                    row=0, column=0, sticky="ew", padx=10, pady=5
+                )
+                brand = Label(paint_frame, text=v["brand"], bg="red").grid(
+                    row=0, column=1, sticky="ew", padx=10, pady=5
+                )
+                type = Label(paint_frame, text=v["type"], bg="green").grid(
+                    row=0, column=2, sticky="ew", padx=10, pady=5
+                )
+                status = Label(paint_frame, text=v["status"], bg="yellow").grid(
+                    row=0, column=3, sticky="ew", padx=10, pady=5
+                )
+
+                paint_frame.pack(fill=X)
