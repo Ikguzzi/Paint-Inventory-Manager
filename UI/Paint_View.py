@@ -53,23 +53,29 @@ def Open_Paints_View():
             paint_table.pack()
 
             for v in data["Paints"]:
-                paint_frame = Frame(r, width=800)
-                paint_frame.pack(fill=X)
 
-                for i in range(4):
-                    paint_frame.columnconfigure(i, weight=1)
+                paint_table.insert(
+                    parent="",
+                    index=0,
+                    values=(v["name"], v["brand"], v["type"], v["status"]),
+                )
+                # paint_frame = Frame(r, width=800)
+                # paint_frame.pack(fill=X)
 
-                name = Label(paint_frame, text=v["name"], bg="lightblue").grid(
-                    row=0, column=0, sticky="ew", padx=10, pady=5
-                )
-                brand = Label(paint_frame, text=v["brand"], bg="red").grid(
-                    row=0, column=1, sticky="ew", padx=10, pady=5
-                )
-                type = Label(paint_frame, text=v["type"], bg="green").grid(
-                    row=0, column=2, sticky="ew", padx=10, pady=5
-                )
-                status = Label(paint_frame, text=v["status"], bg="yellow").grid(
-                    row=0, column=3, sticky="ew", padx=10, pady=5
-                )
+                # for i in range(4):
+                #     paint_frame.columnconfigure(i, weight=1)
 
-                paint_frame.pack(fill=X)
+                # name = Label(paint_frame, text=v["name"], bg="lightblue").grid(
+                #     row=0, column=0, sticky="ew", padx=10, pady=5
+                # )
+                # brand = Label(paint_frame, text=v["brand"], bg="red").grid(
+                #     row=0, column=1, sticky="ew", padx=10, pady=5
+                # )
+                # type = Label(paint_frame, text=v["type"], bg="green").grid(
+                #     row=0, column=2, sticky="ew", padx=10, pady=5
+                # )
+                # status = Label(paint_frame, text=v["status"], bg="yellow").grid(
+                #     row=0, column=3, sticky="ew", padx=10, pady=5
+                # )
+
+                # paint_frame.pack(fill=X)
