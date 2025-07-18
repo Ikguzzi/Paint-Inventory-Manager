@@ -41,6 +41,17 @@ def Open_Paints_View():
             print("JSON file is empty!")
         else:
             data = json.loads(data)
+
+            paint_table = Treeview(
+                r, columns=("Name", "Brand", "Type", "Status"), show="headings"
+            )
+
+            paint_table.heading("Name", text="Name")
+            paint_table.heading("Brand", text="Brand")
+            paint_table.heading("Type", text="Type")
+            paint_table.heading("Status", text="Status")
+            paint_table.pack()
+
             for v in data["Paints"]:
                 paint_frame = Frame(r, width=800)
                 paint_frame.pack(fill=X)
