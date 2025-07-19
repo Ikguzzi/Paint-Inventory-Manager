@@ -6,3 +6,4 @@ class Paint:
         self.type = type
         self.value = value
         self.status = status
+        

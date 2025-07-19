@@ -3,6 +3,8 @@ from tkinter.ttk import *
 from Models.Paints_Add import *
 import json
 
+path = "Data\JSON_Test.json"
+
 
 def Open_Paints_View():
 
@@ -35,7 +37,7 @@ def Open_Paints_View():
     helpMenu.add_command(label="Help")
     helpMenu.add_command(label="About")
 
-    with open("Data\JSON_Test.json", "r") as f:
+    with open(path, "r") as f:
         data = f.read()
         if data.strip() == "":
             print("JSON file is empty!")
@@ -59,23 +61,3 @@ def Open_Paints_View():
                     index=0,
                     values=(v["name"], v["brand"], v["type"], v["status"]),
                 )
-                # paint_frame = Frame(r, width=800)
-                # paint_frame.pack(fill=X)
-
-                # for i in range(4):
-                #     paint_frame.columnconfigure(i, weight=1)
-
-                # name = Label(paint_frame, text=v["name"], bg="lightblue").grid(
-                #     row=0, column=0, sticky="ew", padx=10, pady=5
-                # )
-                # brand = Label(paint_frame, text=v["brand"], bg="red").grid(
-                #     row=0, column=1, sticky="ew", padx=10, pady=5
-                # )
-                # type = Label(paint_frame, text=v["type"], bg="green").grid(
-                #     row=0, column=2, sticky="ew", padx=10, pady=5
-                # )
-                # status = Label(paint_frame, text=v["status"], bg="yellow").grid(
-                #     row=0, column=3, sticky="ew", padx=10, pady=5
-                # )
-
-                # paint_frame.pack(fill=X)

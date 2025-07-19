@@ -1,0 +1,55 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4">
+  <diagram name="Page-1" id="vT1drLA89CnGKlSaFCUv">
+    <mxGraphModel dx="1426" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-8" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vXqz5WDS9p3W0xgSpvtR-2" target="vXqz5WDS9p3W0xgSpvtR-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vXqz5WDS9p3W0xgSpvtR-2" target="vXqz5WDS9p3W0xgSpvtR-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-2" value="Main_Window.py" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="190" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shape=flexArrow;" edge="1" parent="1" source="vXqz5WDS9p3W0xgSpvtR-3" target="vXqz5WDS9p3W0xgSpvtR-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-3" value="main.py" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-12" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vXqz5WDS9p3W0xgSpvtR-5" target="vXqz5WDS9p3W0xgSpvtR-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-14" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vXqz5WDS9p3W0xgSpvtR-5" target="vXqz5WDS9p3W0xgSpvtR-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-16" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vXqz5WDS9p3W0xgSpvtR-5" target="vXqz5WDS9p3W0xgSpvtR-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-18" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vXqz5WDS9p3W0xgSpvtR-5" target="vXqz5WDS9p3W0xgSpvtR-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-5" value="Paint_View.py" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="240" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-6" value="Scheme_View.py" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="240" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-11" value="New Paint" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="160" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-13" value="Export List" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="360" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-15" value="Import List" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="260" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vXqz5WDS9p3W0xgSpvtR-17" value="Sort list" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="340" width="90" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
