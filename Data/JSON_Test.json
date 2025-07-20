@@ -6,7 +6,8 @@
 			"brand": "Citadel",
 			"type": "Wash",
 			"value": "N/A",
-			"status": "Full"
+			"status": "Full",
+			"amount": 4
 		},
 		{
 			"id": 2,
@@ -14,7 +15,8 @@
 			"brand": "Citadel",
 			"type": "Base",
 			"value": "#1B3F8B",
-			"status": "Half-full"
+			"status": "Half-full",
+			"amount": 4
 		},
 		{
 			"id": 3,
@@ -22,7 +24,8 @@
 			"brand": "Vallejo",
 			"type": "Game Color",
 			"value": "#A12228",
-			"status": "Full"
+			"status": "Full",
+			"amount": 4
 		},
 		{
 			"id": 4,
@@ -30,7 +33,8 @@
 			"brand": "Army Painter",
 			"type": "Warpaint Metallic",
 			"value": "#8A8C8E",
-			"status": "Low"
+			"status": "Low",
+			"amount": 4
 		},
 		{
 			"id": 5,
@@ -38,7 +42,8 @@
 			"brand": "P3",
 			"type": "Base",
 			"value": "#E8E3D3",
-			"status": "Full"
+			"status": "Full",
+			"amount": 4
 		},
 		{
 			"id": 6,
@@ -46,7 +51,8 @@
 			"brand": "Citadel",
 			"type": "Layer",
 			"value": "#7C2020",
-			"status": "Low"
+			"status": "Low",
+			"amount": 4
 		},
 		{
 			"id": 7,
@@ -54,7 +60,8 @@
 			"brand": "Vallejo",
 			"type": "Game Color",
 			"value": "#28A352",
-			"status": "Full"
+			"status": "Full",
+			"amount": 4
 		},
 		{
 			"id": 8,
@@ -62,7 +69,8 @@
 			"brand": "Army Painter",
 			"type": "Warpaint",
 			"value": "#D39C74",
-			"status": "Half-full"
+			"status": "Half-full",
+			"amount": 4
 		},
 		{
 			"id": 9,
@@ -70,7 +78,8 @@
 			"brand": "Citadel",
 			"type": "Base",
 			"value": "#434343",
-			"status": "Empty"
+			"status": "Empty",
+			"amount": 4
 		},
 		{
 			"id": 10,
@@ -78,7 +87,8 @@
 			"brand": "P3",
 			"type": "Layer",
 			"value": "#90C3DC",
-			"status": "Full"
+			"status": "Full",
+			"amount": 4
 		},
 		{
 			"id": 11,
@@ -86,7 +96,8 @@
 			"brand": "Toplevel",
 			"type": "Toplevel",
 			"value": "Toplevel",
-			"status": "Toplevel"
+			"status": "Toplevel",
+			"amount": 4
 		}
 	]
 }

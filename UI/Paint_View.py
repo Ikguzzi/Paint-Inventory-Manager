@@ -15,7 +15,14 @@ def Open_Paints_View():
     r.geometry("1200x700")
 
     header = Label(r, text="Paint Catalog", font=("Arial", 30))
-    header.pack()
+    header.grid(row=0, columnspan=2, sticky="we")
+
+    r.grid_rowconfigure(0, weight=0, minsize=40)
+    r.grid_rowconfigure(1, weight=1)
+    r.grid_columnconfigure(1, weight=3)  # For detailed view
+
+    paint_frame = Frame(r, bg="lightgray")
+    paint_frame.grid(row=1, column=0, sticky="nswe")
 
     menu = Menu(r)
 
@@ -45,19 +52,22 @@ def Open_Paints_View():
             data = json.loads(data)
 
             paint_table = Treeview(
-                r, columns=("Name", "Brand", "Type", "Status"), show="headings"
+                paint_frame,
+                columns=("Name", "Brand", "Type", "Status", "Amount"),
+                show="headings",
             )
+            paint_table.grid(row=1, column=0, sticky="nsew")
 
             paint_table.heading("Name", text="Name")
             paint_table.heading("Brand", text="Brand")
             paint_table.heading("Type", text="Type")
             paint_table.heading("Status", text="Status")
-            paint_table.pack()
+            paint_table.heading("Amount", text="Amount")
 
             for v in data["Paints"]:
 
                 paint_table.insert(
                     parent="",
                     index=0,
-                    values=(v["name"], v["brand"], v["type"], v["status"]),
+                    values=(v["name"], v["brand"], v["type"], v["status"], v["amount"]),
                 )
