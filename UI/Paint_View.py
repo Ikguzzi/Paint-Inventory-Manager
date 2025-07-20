@@ -21,7 +21,7 @@ def Open_Paints_View():
     r.grid_rowconfigure(1, weight=1)
     r.grid_columnconfigure(1, weight=3)  # For detailed view
 
-    paint_frame = Frame(r, bg="lightgray")
+    paint_frame = Frame(r, padx=7.5, pady=7.5)
     paint_frame.grid(row=1, column=0, sticky="nswe")
 
     menu = Menu(r)
@@ -71,3 +71,6 @@ def Open_Paints_View():
                     index=0,
                     values=(v["name"], v["brand"], v["type"], v["status"], v["amount"]),
                 )
+
+    detail_frame = Frame(r, bg="red", padx=7.5, pady=7.5)
+    detail_frame.grid(row=1, column=1, sticky="nswe")
