@@ -24,6 +24,12 @@ def Open_Paints_View():
     paint_frame = Frame(r, padx=7.5, pady=7.5)
     paint_frame.grid(row=1, column=0, sticky="nswe")
 
+    detail_frame = Frame(r, bg="red", padx=7.5, pady=7.5)
+    detail_frame.grid(row=1, column=1, sticky="nswe")
+    detail_canvas = Canvas(detail_frame, width=50, height=50)
+    detail_canvas.grid(row=0, column=0)
+    color_rect = detail_canvas.create_rectangle(5, 5, 45, 45, fill="#FFFFFF")
+
     menu = Menu(r)
 
     r.config(menu=menu)
@@ -51,6 +57,7 @@ def Open_Paints_View():
         else:
             data = json.loads(data)
 
+            # Defines the table header
             paint_table = Treeview(
                 paint_frame,
                 columns=("Name", "Brand", "Type", "Status", "Amount"),
@@ -58,12 +65,14 @@ def Open_Paints_View():
             )
             paint_table.grid(row=1, column=0, sticky="nsew")
 
+            # Headers
             paint_table.heading("Name", text="Name")
             paint_table.heading("Brand", text="Brand")
             paint_table.heading("Type", text="Type")
             paint_table.heading("Status", text="Status")
             paint_table.heading("Amount", text="Amount")
 
+            # Inserts the data from JSON file into table
             for v in data["Paints"]:
 
                 paint_table.insert(
@@ -72,5 +81,37 @@ def Open_Paints_View():
                     values=(v["name"], v["brand"], v["type"], v["status"], v["amount"]),
                 )
 
-    detail_frame = Frame(r, bg="red", padx=7.5, pady=7.5)
-    detail_frame.grid(row=1, column=1, sticky="nswe")
+    def paint_select(_):
+        selected = paint_table.selection()
+        if selected:
+            item = paint_table.item(selected[0])
+            values = item["values"]
+
+            for widget in detail_frame.winfo_children():
+                if widget != detail_canvas:
+                    widget.destroy()
+
+            name = Label(detail_frame, text=values[0], font=("Arial", 16))
+            name.grid(row=1, column=0, sticky="ew", pady=10)
+
+            brand = Label(detail_frame, text=values[1], font=("Arial", 16))
+            brand.grid(row=2, column=0, sticky="ew", pady=10)
+
+            type = Label(detail_frame, text=values[2], font=("Arial", 16))
+            type.grid(row=3, column=0, sticky="ew", pady=10)
+
+            rgb_value = Label(detail_frame, text=values[3], font=("Arial", 16))
+            rgb_value.grid(row=4, column=0, sticky="ew", pady=10)
+
+            status = Label(detail_frame, text=values[4], font=("Arial", 16))
+            status.grid(row=5, column=0, sticky="ew", pady=10)
+
+            for paint in data["Paints"]:
+                if paint["name"] == values[0]:
+                    color_value = paint.get("value", "#FFFFFF")
+                    break
+            else:
+                color_value = "#FFFFFF"
+            detail_canvas.itemconfig(color_rect, fill=color_value)
+
+    paint_table.bind("<<TreeviewSelect>>", paint_select)
