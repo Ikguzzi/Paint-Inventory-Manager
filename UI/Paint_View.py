@@ -4,6 +4,8 @@ from Models.Paints_Add import *
 import json
 
 path = "Data\JSON_Test.json"
+font = "Arial"
+label_size = 16
 
 
 def Open_Paints_View():
@@ -14,18 +16,26 @@ def Open_Paints_View():
     r.title("Paint Inventory")
     r.geometry("1200x700")
 
-    header = Label(r, text="Paint Catalog", font=("Arial", 30))
+    header = Label(r, text="Paint Catalog", font=(font, 30))
     header.grid(row=0, columnspan=2, sticky="we")
 
-    r.grid_rowconfigure(0, weight=0, minsize=40)
+    # r.grid_rowconfigure(0, weight=0, minsize=40)
     r.grid_rowconfigure(1, weight=1)
-    r.grid_columnconfigure(1, weight=3)  # For detailed view
+    r.grid_columnconfigure(0, weight=1)  # For detailed view
+    r.grid_columnconfigure(1, weight=2)  # For detailed view
 
     paint_frame = Frame(r, padx=7.5, pady=7.5)
     paint_frame.grid(row=1, column=0, sticky="nswe")
 
-    detail_frame = Frame(r, bg="red", padx=7.5, pady=7.5)
+    detail_frame = Frame(r, padx=7.5, pady=7.5)
     detail_frame.grid(row=1, column=1, sticky="nswe")
+
+    paint_frame.grid_rowconfigure(1, weight=1)
+    paint_frame.grid_columnconfigure(0, weight=1)
+
+    detail_frame.grid_rowconfigure(0, weight=1)
+    detail_frame.grid_columnconfigure(0, weight=1)
+
     detail_canvas = Canvas(detail_frame, width=50, height=50)
     detail_canvas.grid(row=0, column=0)
     color_rect = detail_canvas.create_rectangle(5, 5, 45, 45, fill="#FFFFFF")
@@ -64,6 +74,7 @@ def Open_Paints_View():
                 show="headings",
             )
             paint_table.grid(row=1, column=0, sticky="nsew")
+            detail_canvas.grid(row=0, column=0, sticky="nsew")
 
             # Headers
             paint_table.heading("Name", text="Name")
@@ -91,20 +102,37 @@ def Open_Paints_View():
                 if widget != detail_canvas:
                     widget.destroy()
 
-            name = Label(detail_frame, text=values[0], font=("Arial", 16))
-            name.grid(row=1, column=0, sticky="ew", pady=10)
+            name_label = Label(detail_frame, text="Name: ", font=(font, label_size))
+            name = Label(detail_frame, text=values[0], font=(font, label_size))
+            name_label.grid(row=1, column=0, sticky="ew")
+            name.grid(row=1, column=1, sticky="ew")
 
-            brand = Label(detail_frame, text=values[1], font=("Arial", 16))
-            brand.grid(row=2, column=0, sticky="ew", pady=10)
+            brand_label = Label(detail_frame, text="Brand: ", font=(font, label_size))
+            brand = Label(detail_frame, text=values[1], font=(font, label_size))
+            brand_label.grid(row=2, column=0, sticky="ew")
+            brand.grid(row=2, column=1, sticky="ew")
 
-            type = Label(detail_frame, text=values[2], font=("Arial", 16))
-            type.grid(row=3, column=0, sticky="ew", pady=10)
+            type_label = Label(detail_frame, text="Type: ", font=(font, label_size))
+            type = Label(detail_frame, text=values[2], font=(font, label_size))
+            type_label.grid(row=3, column=0, sticky="ew")
+            type.grid(row=3, column=1, sticky="ew")
 
-            rgb_value = Label(detail_frame, text=values[3], font=("Arial", 16))
-            rgb_value.grid(row=4, column=0, sticky="ew", pady=10)
+            rgb_value_label = Label(
+                detail_frame, text="RGB Value:", font=(font, label_size)
+            )
+            rgb_value = Label(detail_frame, text=values[3], font=(font, label_size))
+            rgb_value_label.grid(row=4, column=0, sticky="ew")
+            rgb_value.grid(row=4, column=1, sticky="ew")
 
-            status = Label(detail_frame, text=values[4], font=("Arial", 16))
-            status.grid(row=5, column=0, sticky="ew", pady=10)
+            status_label = Label(detail_frame, text="Status: ", font=(font, label_size))
+            status = Label(detail_frame, text=values[4], font=(font, label_size))
+            status_label.grid(row=5, column=0)
+            status.grid(row=5, column=1)
+
+            # amount_label = Label(detail_frame, text="Amount: ", font=(font, label_size))
+            # amount = Label(detail_frame, text=values[5], font=(font, label_size))
+            # amount_label.grid(row=6, column=0, sticky="ew", pady=10)
+            # amount.grid(row=6, column=1, sticky="ew", pady=10)
 
             for paint in data["Paints"]:
                 if paint["name"] == values[0]:
